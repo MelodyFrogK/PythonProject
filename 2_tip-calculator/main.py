@@ -8,12 +8,12 @@
 #Write your code below this line 👇
 print("Welcome to the tip calculator!")
 
-bill = input("총 비용은 얼마입니까?  $")
+bill = float(input("총 비용은 얼마입니까?  $"))
 
-tip = input("팁은 얼마나 주시겠습니까? 10%, 12%, or 15%?")
+tip = int(input("팁은 얼마나 주시겠습니까? 10%, 12%, or 15%?"))
 
-people = input("몇 명이서 식사하셨습니까?")
+people = int(input("몇 명이서 식사하셨습니까?"))
 
-result = round(float(bill) * (1 + int(tip) / 100) / int(people))
+result = round(bill * (1 + tip / 100) / people,2)
 
 print(f"총액은 인당 ${result} 입니다.")
