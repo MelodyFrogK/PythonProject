@@ -23,6 +23,4 @@ jobs:
 
     - name: Run script
       run: |
-        python 10.계산기/main.py
-        python 11.블랙잭/main.py
-        python 12.도둑잡기게임/main.py
+        python '11.BlackJack/main.py'
