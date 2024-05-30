@@ -1,5 +1,6 @@
 # 도둑 잡기 게임_층수 맞추기
 
+#Number Guessing Game Objectives:
 import random
 from art import logo
 print(logo)
@@ -14,26 +15,17 @@ def story(difficulty):
 
 #난이도별 최상층 선택
 def floor_list(difficulty):
-  floor = []
   if difficulty == "상":
-    for i in range(1, 151):
-      floor.append(i)
-    return floor
+    return list(range(1, 151))
   elif difficulty == "중":
-    for i in range(1, 101):
-      floor.append(i)
-    return floor
+    return list(range(1, 101))
   else:
-    for i in range(1, 51):
-      floor.append(i)
-    return floor
+    return list(range(1, 51))
 
 #난이도별 게임 진행 횟수
 def coin_count(difficulty):
   if difficulty == "상":
     return 5
-  elif difficulty == "중":
-    return 10
   else:
     return 10
 
@@ -77,7 +69,7 @@ while state is True:
   #도망간 층수 결정
   floor_number = pick_number(floor)
 
-  while coin is not 0:
+  while coin != 0:
     #정답 체크
     answer = int(input("범인은 몇 층으로 도망갔을까요?"))
     coin = check_answer(answer, floor_number, coin)
